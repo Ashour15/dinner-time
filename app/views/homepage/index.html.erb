@@ -1,0 +1,9 @@
+<h1>Recipes</h1>
+<%= form_tag recipes_path, :method => "get" do %>
+ <%= label_tag :add_ingredients, "Add ingredients" %>
+ <%= text_area_tag :ingredients_names, params[:ingredients_names], id: 'txt-field', input_html: { multiple: true } %>
+ <%= button_tag 'Add Ingredient', id: 'add-btn', type: 'button' %>
+ <%= submit_tag("Search for recipes", :name => nil) %>
+<% end %>
+<ul id="list-id"></ul>  
+<%= javascript_pack_tag 'homepage/index' %>
