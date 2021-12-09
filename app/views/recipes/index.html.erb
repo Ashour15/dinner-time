@@ -1,0 +1,22 @@
+<div class="container">
+  <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+      <tr>
+        <th>Rate</th>
+        <th>Author tip</th>
+        <th>budget</th>
+        <th>preptime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipes.each do |recipe| %>
+        <tr>
+          <td><%= recipe.rate %></td>
+          <td><%= recipe.author_tip %></td>
+          <td><%= recipe.budget %></td>
+          <td><%= recipe.prep_time %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
